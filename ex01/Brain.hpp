@@ -6,26 +6,20 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:14:22 by peli              #+#    #+#             */
-/*   Updated: 2025/05/19 17:31:07 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/20 14:14:10 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "iostream"
+#include <iostream>
+#include <string.h>
 
 class Brain
 {
 private:
     std::string ideas[100];
 public:
-    Brain(/* args */);
+    Brain();
     ~Brain();
 };
 
-Brain::Brain(/* args */)
-{
-}
-
-Brain::~Brain()
-{
-}

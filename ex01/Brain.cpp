@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 12:17:10 by peli              #+#    #+#             */
-/*   Updated: 2025/05/20 15:28:37 by peli             ###   ########.fr       */
+/*   Created: 2025/05/20 14:14:13 by peli              #+#    #+#             */
+/*   Updated: 2025/05/20 14:14:30 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
-int main()
+Brain::Brain()
 {
-    int size = 4;
-    Animal*  Animal[size];
-    
-    int i = 0;
-    while (i < size / 2)
-    {
-        animal[i] = new Dog;
-        i++;
-    }
-    while (i < size)
-    {
-        animal[i] = new Cat;
-        i++;
-    }
-    return 0;
+    std::cout << "Constructor of the brain is called" << std::endl;
 }
+
+Brain::~Brain()
+{
+    std::cout << "Destructor of the brain is called" << std::endl;
+}
+
