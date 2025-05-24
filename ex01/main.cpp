@@ -6,7 +6,7 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 12:17:10 by peli              #+#    #+#             */
-/*   Updated: 2025/05/20 15:28:37 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/22 14:54:44 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int main()
 {
     int size = 4;
-    Animal*  Animal[size];
+    Animal*  animal[size];
     
     int i = 0;
     while (i < size / 2)
@@ -32,5 +32,6 @@ int main()
         animal[i] = new Cat;
         i++;
     }
+    
     return 0;
 }

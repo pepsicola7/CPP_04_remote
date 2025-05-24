@@ -6,7 +6,7 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 14:09:42 by peli              #+#    #+#             */
-/*   Updated: 2025/05/20 14:33:22 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/22 18:11:56 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,14 @@
 class Cat: public Animal
 {
 private:
-    Brain*   Brain;
+    Brain*   brain;
 public:
-    Cat()
-    {
-        std::cout << "Constructor of Cat is called" << std::endl;
-        type = "Cat";
-        Brain Cat_brain = new Brain;
-    };
-    ~Cat()
-    {
-        std::cout << "Destructor of Cat is called" << std::endl;
-        delete Cat_brain;
-    };
+    Cat();
+    ~Cat();
+    Cat(const Cat& other);
+    Cat& operator = (const Cat& other);
+    void    setideas(int index, const std::string& idea);
+    void    getideas(int i) const;
     void    makeSound() const
     {
         std::cout << "Cat miao~ miao~" << std::endl;

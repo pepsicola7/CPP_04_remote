@@ -6,7 +6,7 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:14:22 by peli              #+#    #+#             */
-/*   Updated: 2025/05/20 14:14:10 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/22 18:10:40 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,9 @@ private:
 public:
     Brain();
     ~Brain();
+    Brain(const Brain &other);
+    Brain& operator = (const Brain& other);
+    void    setideas(int index, const std::string& idea);
+    std::string    Brain::getideas(int i);
 };
 
