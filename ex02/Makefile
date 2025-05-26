@@ -9,7 +9,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 
 #Fichier sources et objets
 SRC = main.cpp \
-		Animal.cpp \
+		AAnimal.cpp \
 		WrongAnimal.cpp \
 		Dog.cpp \
 		Cat.cpp \

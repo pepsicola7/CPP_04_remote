@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Wrongcat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 14:09:42 by peli              #+#    #+#             */
-/*   Updated: 2025/05/26 11:38:10 by peli             ###   ########.fr       */
+/*   Created: 2025/05/19 17:03:11 by peli              #+#    #+#             */
+/*   Updated: 2025/05/19 17:05:32 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat: public Animal
+class WrongCat: public WrongAnimal
 {
-private:
-    Brain*   brain;
 public:
-    Cat();
-    ~Cat();
-    Cat(const Cat& other);
-    Cat& operator = (const Cat& other);
-    void    setideas(int index, const std::string& idea);
-    void    getideas(int i) const;
+    WrongCat()
+    {
+        std::cout << "Constructor of WrongCat is called" << std::endl;
+        type = "Cat";
+    };
+    ~WrongCat()
+    {
+        std::cout << "Destructor of WrongCat is called" << std::endl;
+    };
     void    makeSound() const
     {
-        std::cout << "Cat miao~ miao~" << std::endl;
+        std::cout << "WrongCat  miao~ miao~" << std::endl;
     };
     std::string getType() const
     {

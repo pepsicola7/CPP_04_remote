@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 17:14:22 by peli              #+#    #+#             */
-/*   Updated: 2025/05/26 11:37:49 by peli             ###   ########.fr       */
+/*   Created: 2025/05/19 14:09:03 by peli              #+#    #+#             */
+/*   Updated: 2025/05/26 16:12:30 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
-#include <string.h>
 
-class Brain
+class Animal
 {
-private:
-    std::string ideas[100];
+protected:
+    std::string type;
 public:
-    Brain();
-    ~Brain();
-    Brain(const Brain &other);
-    Brain& operator = (const Brain& other);
-    void    setideas(int index, const std::string& idea);
-    std::string    getideas(int i);
+    Animal();
+    virtual ~Animal();
+    virtual std::string    getType() const;
+    virtual void makeSound() const = 0;
 };
-

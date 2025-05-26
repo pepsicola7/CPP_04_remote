@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 17:14:22 by peli              #+#    #+#             */
-/*   Updated: 2025/05/26 11:37:49 by peli             ###   ########.fr       */
+/*   Created: 2025/05/19 14:10:48 by peli              #+#    #+#             */
+/*   Updated: 2025/05/26 16:12:09 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
-#include <string.h>
+#include "AAnimal.hpp"
 
-class Brain
+Animal::Animal()
 {
-private:
-    std::string ideas[100];
-public:
-    Brain();
-    ~Brain();
-    Brain(const Brain &other);
-    Brain& operator = (const Brain& other);
-    void    setideas(int index, const std::string& idea);
-    std::string    getideas(int i);
-};
+    std::cout << "Constructor of Animal is called" << std::endl;
+    type = "Animal";
+}
 
+Animal::~Animal()
+{
+    std::cout << "Destructor of Animal is called" << std::endl;
+}
+
+void    Animal::makeSound() const
+{
+    std::cout << "Animal makes some sounds" << std::endl;
+}
+
+std::string Animal::getType() const
+{
+    return (this->type);
+}
