@@ -8,7 +8,12 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 
 #Fichier sources et objets
-SRC = main.cpp 
+SRC = main.cpp \
+	Character.cpp \
+	ICharacter.cpp\
+	Cure.cpp \
+	Ice.cpp \
+	Amateria.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
