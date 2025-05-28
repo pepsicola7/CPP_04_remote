@@ -10,10 +10,10 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 #Fichier sources et objets
 SRC = main.cpp \
 	Character.cpp \
-	ICharacter.cpp\
 	Cure.cpp \
 	Ice.cpp \
-	Amateria.cpp
+	AMateria.cpp \
+	MateriaSource.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

@@ -6,11 +6,14 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 17:07:48 by peli              #+#    #+#             */
-/*   Updated: 2025/05/26 17:31:11 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/28 16:53:48 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#pragma once
+#include <iostream>
+
+class AMateria;
 
 class ICharacter
 {
