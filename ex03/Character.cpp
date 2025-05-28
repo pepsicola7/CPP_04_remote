@@ -6,7 +6,7 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 18:06:04 by peli              #+#    #+#             */
-/*   Updated: 2025/05/28 17:11:08 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/28 20:14:06 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ void Character::equip(AMateria* m)
         else
         {
             slot[i] = m;
-            std::cerr << "Assigned! " << m << "at " << i << std::endl;
             return ;
         }
     }
@@ -94,12 +93,8 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-    std::cerr << "Char is using!" << std::endl;
-    for (int i = 0; i < 4; ++i)
-        std::cerr << slot[i] << " " << std::endl; 
     if (idx < 0 || idx >= 4 || !slot[idx])
         return;
-    std::cerr << "Char is really using!" << std::endl;
 
     slot[idx]->use(target);
 };
